@@ -15,7 +15,6 @@
 }
 
 body {
-  background-color: #1d3557;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -23,17 +22,19 @@ body {
 }
 
 header {
-  z-index: 5;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--cyan);
   padding: 10px 20px;
+  background-color: white;
 }
 
 h2 {
-  color: var(--off-white);
+  color: var(--dark-cyan);
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 p {
@@ -41,57 +42,39 @@ p {
   font-size: 18px
 }
 
-main {
-  margin: 60px 10px 30px 10px;
-  width: fit-content;
-  height: 650px;
+#coding-area{
+  margin: 60px 0px 15px 0px;
   display: flex;
-  border: 2px solid var(--dark-cyan);
-  border-radius: 30px;
-  overflow: hidden;
+  border: 1px solid var(--dark-cyan);
 }
-
-.main-container {
-  width: 640px;
-  height: 590px;
-  background-color: var(--off-white);
-  padding: 30px;
-
-}
-
 .container {
-  padding: 30px;
+  padding: 10px;
   min-width: 480px;
   max-width: 480px;
-  height: 590px;
+  min-height: 480px;
   background-color: white;
-  border-left: 2px solid var(--dark-cyan);
+  border-left: 1px solid var(--dark-cyan);
   overflow: hidden;
+  opacity: .8;
 }
 
 .box {
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: .7;
 }
 
 .red {
   background-color: red;
 }
 
-.blue {
-  background-color: blue;
+.orange{
+  background-color: orange;
 }
-
-.green {
-  background-color: green;
-}
-
-.yellow {
+.yellow{
   background-color: yellow;
 }
 
@@ -100,7 +83,48 @@ h3 {
   color: var(--off-white);
 }
 textarea{
-  margin:5px 20px;
-  padding:5px 0px;
-  text-indent: 10px;
+  font-size: 1rem;
+  margin:5px 0px;
+  padding:5px 10px;
+  outline-color: var(--off-white);
+  background-color: var(--off-white);
+  border: none;
+  letter-spacing: 2px;
+  resize: none;
+}
+.input-code{
+  width: 500px;
+  padding: 20px;
+  background-color: var(--light-blue);
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:10px;
+}
+.txt-area>p{
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.app-rem-child{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn{
+  padding: 10px 30px;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  font-size: 1rem;
+  font-weight: 700;
+  border: 3px solid var(--soft-red);
+  border-radius: 20px;
+  transition: all .2s linear;
+}
+.btn:hover{
+  background-color: white;
+  color: var(--soft-red);
 }
