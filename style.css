@@ -102,6 +102,7 @@ textarea{
   align-items: center;
   flex-wrap: wrap;
   gap:10px;
+  
 }
 .txt-area>p{
   font-size: 1rem;
