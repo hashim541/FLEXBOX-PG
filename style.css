@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+  --off-white: #f1faee;
+  --light-blue: #a8dadc;
+  --cyan: #457b9d;
+  --dark-cyan: #1d3557;
+  --soft-red: #e63946;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--cyan);
+  padding: 10px 20px;
+}
+
+h2 {
+  color: var(--off-white);
+}
+
+p {
+  color: var(--dark-cyan);
+  font-size: 18px
+}
+
+main {
+  margin: 60px 10px 30px 10px;
+  width: fit-content;
+  height: 650px;
+  display: flex;
+  border: 2px solid var(--dark-cyan);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.main-container {
+  width: 640px;
+  height: 590px;
+  background-color: var(--off-white);
+  padding: 30px;
+
+}
+
+.container {
+  padding: 30px;
+  min-width: 480px;
+  max-width: 480px;
+  height: 590px;
+  background-color: white;
+  border-left: 2px solid var(--dark-cyan);
+  overflow: hidden;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .7;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--off-white);
+}
+textarea{
+  margin:5px 20px;
+  padding:5px 0px;
+  text-indent: 10px;
+}
