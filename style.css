@@ -30,6 +30,12 @@ header {
   padding: 10px 20px;
   background-color: white;
 }
+main{
+  max-width: 1050px;
+  min-width: 80vw;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
 
 h2 {
   color: var(--dark-cyan);
@@ -49,15 +55,16 @@ p {
 }
 .container {
   padding: 10px;
-  min-width: 480px;
-  max-width: 480px;
+  width: 50%;
   min-height: 480px;
   background-color: white;
-  border-left: 1px solid var(--dark-cyan);
+  border-left : 1px solid var(--dark-cyan);
   overflow: hidden;
   opacity: .8;
 }
-
+#container{
+  width:90%;
+}
 .box {
   width: 70px;
   height: 70px;
@@ -93,8 +100,8 @@ textarea{
   resize: none;
 }
 .input-code{
-  width: 500px;
-  padding: 20px;
+  width: 50%;
+  padding: 10px 10px;
   background-color: var(--light-blue);
   display:flex;
   flex-direction: row;
@@ -102,7 +109,6 @@ textarea{
   align-items: center;
   flex-wrap: wrap;
   gap:10px;
-  
 }
 .txt-area>p{
   font-size: 1rem;
@@ -122,10 +128,32 @@ textarea{
   font-size: 1rem;
   font-weight: 700;
   border: 3px solid var(--soft-red);
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all .2s linear;
 }
 .btn:hover{
   background-color: white;
   color: var(--soft-red);
+}
+
+
+@media(width <700px){
+  main{
+    padding: 0;
+    width:95%;
+  }
+  #coding-area{
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+  }
+  .container{
+    padding: 10px 10px 10px 10px;
+    width:100%;
+    border-left: none;
+    border-bottom: 1px solid var(--dark-cyan);
+  }
+  .input-code{
+    width:100%;
+  }
 }

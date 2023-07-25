@@ -6,6 +6,8 @@ var index=3;
 const containerDiv=document.querySelector('.container');
 const inputCode=document.querySelector('.input-code');
 
+
+
 document.querySelector('.append').addEventListener('click',function(){
   if(number <= 8 && number>0){
     appendBox();
