@@ -6,7 +6,10 @@ var index=3;
 const containerDiv=document.querySelector('.container');
 const inputCode=document.querySelector('.input-code');
 
-
+const inputs=document.querySelectorAll('textarea')
+for(z=0;z<inputs.length;z++){
+setStyle(inputs[z]);
+}
 
 document.querySelector('.append').addEventListener('click',function(){
   if(number <= 8 && number>0){
@@ -26,8 +29,9 @@ function appendBox(){
   h3.innerText=number;
 
   colorDiv.appendChild(h3);
+  colorDiv.classList.add(colors[index]);
   colorDiv.classList.add('box');
-  colorDiv.classList.add(colors[index])
+
   colorDiv.style.backgroundColor=colors[index];
 
   containerDiv.appendChild(colorDiv);
@@ -49,6 +53,8 @@ function appendBox(){
 
   inputCode.appendChild(txtDiv)
 
+  setStyle(document.querySelector('#'+colors[index]));
+
   number++;
   index++;
 }
@@ -59,23 +65,23 @@ function removeBox(){
   index--;
 }
 
-
-$('textarea').keyup( function(e) {
-    
-  var styles;
-  var mainCSS=[];
-  var ids=$(this).attr('id');
-  console.log(ids)
-  var valuess=this.value;
-  styles=valuess.split('\n');
-  for(k=0;k<styles.length;k++){
-    mainCSS[k]=(splitUp(styles[k])); 
-  }
-  for(j=0;j<mainCSS.length;j++){
-    $('.'+ids).css(mainCSS[j][0],mainCSS[j][1]);
-  }
-});
-
+function setStyle(a){
+  a.addEventListener('keyup', function(e) {  
+    var styles;
+    var mainCSS=[];
+    var ids=$(this).attr('id');
+    console.log(this);
+    console.log(ids)
+    var valuess=this.value;
+    styles=valuess.split('\n');
+    for(k=0;k<styles.length;k++){
+      mainCSS[k]=(splitUp(styles[k])); 
+    }
+    for(j=0;j<mainCSS.length;j++){
+      $('.'+ids).css(mainCSS[j][0],mainCSS[j][1]);
+    }
+  });
+}
 function splitUp(v){
   var z='';
   for(i=0;i<v.length;i++){
