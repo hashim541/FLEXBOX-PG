@@ -27,6 +27,7 @@ function appendBox(){
 
   colorDiv.appendChild(h3);
   colorDiv.classList.add('box');
+  colorDiv.classList.add(colors[index])
   colorDiv.style.backgroundColor=colors[index];
 
   containerDiv.appendChild(colorDiv);
