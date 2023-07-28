@@ -32,9 +32,11 @@ header {
 }
 
 main {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 70px;
-  max-width: 1050px;
-  min-width: 80vw;
   padding: 0px 20px;
   margin-bottom: 20px;
 }
@@ -51,6 +53,7 @@ p {
 }
 
 #coding-area {
+  width:1000px;
   margin: 10px 0px 15px 0px;
   display: flex;
   border: 1px solid var(--dark-cyan);
@@ -58,7 +61,8 @@ p {
 
 .container {
   padding: 10px;
-  width: 50%;
+  min-width: 50%;
+  max-width: 500px;
   min-height: 480px;
   background-color: white;
   border-left: 1px solid var(--dark-cyan);
@@ -106,10 +110,12 @@ textarea {
   border: none;
   letter-spacing: 2px;
   resize: none;
+  box-shadow: 6px 6px   var(--cyan);
+  border-radius: 5px;
 }
 
 .input-code {
-  width: 50%;
+  max-width: 500px;
   padding: 10px 10px;
   background-color: var(--light-blue);
   display: flex;
@@ -121,9 +127,8 @@ textarea {
 }
 
 .txt-area>p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 .app-rem-child {
@@ -149,8 +154,9 @@ textarea {
 }
 
 .under-lay {
-  background-image: url(./images/level1.jpg);
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: 0;
   bottom: 0;
   left: 0;
@@ -180,31 +186,41 @@ textarea {
 }
 
 .select-lvl {
+  width:100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@media(width <700px) {
+@media(width <1040px) {
   main {
     padding: 0;
-    width: 95%;
+    width: 80%;
   }
 
   #coding-area {
+    width: fit-content;
     display: flex;
     flex-direction: column-reverse;
-    overflow: hidden;
   }
 
   .container {
     padding: 10px 10px 10px 10px;
-    width: 100%;
     border-left: none;
     border-bottom: 1px solid var(--dark-cyan);
   }
+}
 
-  .input-code {
-    width: 100%;
+@media(width<500px){
+  main{
+    width: 95%;
+  }
+  .container{
+    min-height:400px;
+  }
+  .box{
+    width:58px;
+    height:58px;
+    border-radius: 6px;
   }
 }

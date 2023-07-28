@@ -1,4 +1,4 @@
-const colors = ['red', 'orange', 'yellow', 'green', 'deepskyblue', 'blue', 'deeppink', 'darkmagenta']
+const colors = ['red', 'orange', 'yellow', 'green', 'deepskyblue', 'deeppink']
 
 var number = 4;
 var index = 3;
@@ -12,12 +12,12 @@ for (z = 0; z < inputs.length; z++) {
 }
 
 document.querySelector('.append').addEventListener('click', function() {
-  if (number <= 8 && number > 0) {
+  if (number <= 6 && number > 0) {
     appendBox();
   }
 })
 document.querySelector('.remove').addEventListener('click', function() {
-  if (index <= 8 && number > 3) {
+  if (index <= 6 && number > 3) {
     removeBox();
   }
 })
@@ -99,11 +99,27 @@ function splitUp(v) {
 }
 
 
-var currLvl = 1;
+var currLvl = 0;
 
 var span = document.querySelector('.s-lvl');
+var bkImage=document.querySelector('.under-lay');
 document.querySelector('.right-arr').addEventListener('click', function() {
+  currLvl++;
   span.innerText = currLvl;
 
-  currLvl++;
+  bkImage.style.backgroundImage='url(./images/level'+currLvl+'.jpg)';
+});
+document.querySelector('.left-arr').addEventListener('click', function() {
+  
+  if (currLvl > 0){
+    currLvl--;
+    if(currLvl <= 0){
+      span.innerText = 'PRACTICE';
+    }else{
+      span.innerText = currLvl;
+    }
+  }
+  bkImage.style.backgroundImage='url(./images/level'+currLvl+'.jpg)';
+  console.log(currLvl);
+
 });
