@@ -30,7 +30,9 @@ header {
   padding: 10px 20px;
   background-color: white;
 }
-main{
+
+main {
+  margin-top: 70px;
   max-width: 1050px;
   min-width: 80vw;
   padding: 0px 20px;
@@ -48,23 +50,27 @@ p {
   font-size: 18px
 }
 
-#coding-area{
-  margin: 60px 0px 15px 0px;
+#coding-area {
+  margin: 10px 0px 15px 0px;
   display: flex;
   border: 1px solid var(--dark-cyan);
 }
+
 .container {
   padding: 10px;
   width: 50%;
   min-height: 480px;
   background-color: white;
-  border-left : 1px solid var(--dark-cyan);
+  border-left: 1px solid var(--dark-cyan);
   overflow: hidden;
   opacity: .8;
+  position: relative;
 }
-#container{
-  width:90%;
+
+#container {
+  width: 90%;
 }
+
 .box {
   width: 70px;
   height: 70px;
@@ -78,10 +84,11 @@ p {
   background-color: red;
 }
 
-.orange{
+.orange {
   background-color: orange;
 }
-.yellow{
+
+.yellow {
   background-color: yellow;
 }
 
@@ -89,39 +96,43 @@ h3 {
   font-size: 2rem;
   color: var(--off-white);
 }
-textarea{
+
+textarea {
   font-size: 1rem;
-  margin:5px 0px;
-  padding:5px 10px;
+  margin: 5px 0px;
+  padding: 5px 10px;
   outline-color: var(--off-white);
   background-color: var(--off-white);
   border: none;
   letter-spacing: 2px;
   resize: none;
 }
-.input-code{
+
+.input-code {
   width: 50%;
   padding: 10px 10px;
   background-color: var(--light-blue);
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap:10px;
+  gap: 10px;
 }
-.txt-area>p{
+
+.txt-area>p {
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-.app-rem-child{
+.app-rem-child {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.btn{
+
+.btn {
   padding: 10px 30px;
   background-color: var(--soft-red);
   color: var(--off-white);
@@ -131,29 +142,69 @@ textarea{
   border-radius: 10px;
   transition: all .2s linear;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: white;
   color: var(--soft-red);
 }
 
+.under-lay {
+  background-image: url(./images/level1.jpg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: -2;
+}
 
-@media(width <700px){
-  main{
+.arr-btn {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid var(--dark-cyan);
+  border-radius: 8px;
+}
+
+.arr-btn>img {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.right-arr {
+  rotate: 180deg;
+}
+
+.select-lvl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media(width <700px) {
+  main {
     padding: 0;
-    width:95%;
+    width: 95%;
   }
-  #coding-area{
+
+  #coding-area {
     display: flex;
     flex-direction: column-reverse;
     overflow: hidden;
   }
-  .container{
+
+  .container {
     padding: 10px 10px 10px 10px;
-    width:100%;
+    width: 100%;
     border-left: none;
     border-bottom: 1px solid var(--dark-cyan);
   }
-  .input-code{
-    width:100%;
+
+  .input-code {
+    width: 100%;
   }
 }
