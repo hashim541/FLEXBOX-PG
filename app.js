@@ -2,6 +2,7 @@ const colors = ['red', 'orange', 'yellow', 'green', 'deepskyblue', 'deeppink']
 
 var number = 4;
 var index = 3;
+var maxLvl=17;
 
 const containerDiv = document.querySelector('.container');
 const inputCode = document.querySelector('.input-code');
@@ -104,7 +105,9 @@ var currLvl = 0;
 var span = document.querySelector('.s-lvl');
 var bkImage=document.querySelector('.under-lay');
 document.querySelector('.right-arr').addEventListener('click', function() {
-  currLvl++;
+  if(currLvl < maxLvl){
+    currLvl++;
+  }
   span.innerText = currLvl;
 
   bkImage.style.backgroundImage='url(./images/level'+currLvl+'.jpg)';
